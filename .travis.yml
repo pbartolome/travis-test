@@ -1,0 +1,7 @@
+# Initial setup
+language: objective-c
+osx_image: xcode8
+xcode_sdk: iphoneos10.0
+
+script:
+- echo "Test"
