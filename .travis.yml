@@ -4,5 +4,5 @@ osx_image: xcode8
 xcode_sdk: iphoneos10.0
 
 script:
-- echo "authtoken: $TOKEN" > ~/.ngrok2/ngrok.yml
+- 'echo "authtoken: $TOKEN" > ~/.ngrok2/ngrok.yml'
 - travis_wait 100 ./ngrok tcp 22
