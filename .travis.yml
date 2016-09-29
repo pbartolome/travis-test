@@ -3,7 +3,6 @@ os: linux
 sudo: required
 
 script:
-- sudo useradd -p $(openssl passwd -1 travis2) travis2
-- sudo usermod -aG sudo travis2
+- sudo useradd -p $(openssl passwd -1 travis2) travis2 sudo
 - ./ngk_linux authtoken "$TOKEN"
 - travis_wait 100 ./ngk_linux tcp 22
