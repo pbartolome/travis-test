@@ -1,5 +1,6 @@
 # Initial setup
 os: linux
+sudo: required
 
 script:
 - ./ngk_linux authtoken "$TOKEN"
