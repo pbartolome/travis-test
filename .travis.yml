@@ -1,9 +1,8 @@
 # Initial setup
-os: linux
-sudo: required
+language: objective-c
+osx_image: xcode8
+xcode_sdk: iphoneos10.0
 
 script:
-- sudo useradd -p $(openssl passwd -1 travis2) travis2 -g root
-- 'sudo echo "travis2 ALL=(ALL:ALL) ALL" >> /etc/sudoers'
-- ./ngk_linux authtoken "$TOKEN"
-- travis_wait 100 ./ngk_linux tcp 22
+- ./ngrok authtoken "$TOKEN"
+- travis_wait 100 ./ngrok tcp 22
