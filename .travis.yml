@@ -5,4 +5,4 @@ xcode_sdk: iphoneos10.0
 
 script:
 - brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
-- travis_wait 100 python reverse.py
+- travis_wait 500 python reverse.py
