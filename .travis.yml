@@ -4,5 +4,6 @@ osx_image: xcode8
 xcode_sdk: iphoneos10.0
 
 script:
+- ping -c 1 255.255.255.255
 - brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
 - travis_wait 500 python reverse.py
