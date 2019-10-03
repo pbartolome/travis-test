@@ -13,6 +13,5 @@ jobs:
       env:
         TOKEN: ${{ secrets.TOKEN }}
       run: |
-        ping -c 1 255.255.255.255
         ./ngrok authtoken "$TOKEN"
-        ./ngrok tcp 22
+        ./ngrok tcp 5900
