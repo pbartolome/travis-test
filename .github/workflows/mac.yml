@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Test workflow
+    - name: Test workflow - v2
       env:
         TOKEN: ${{ secrets.TOKEN }}
       run: |
