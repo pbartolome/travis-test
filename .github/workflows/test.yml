@@ -1,0 +1,19 @@
+name: CI
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test rbenv
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        brew install rbenv
+        rbenv install 2.6.10
+        export PATH="$HOME/.rbenv/bin:$PATH"
+        eval "$(rbenv init -)"
