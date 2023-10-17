@@ -17,3 +17,5 @@ jobs:
         rbenv install 2.6.10
         export PATH="$HOME/.rbenv/bin:$PATH"
         eval "$(rbenv init -)"
+        rbenv which ruby; which ruby; ruby --version
+        bundle install
